@@ -13,9 +13,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install --no-audit --no-fund --legacy-peer-deps
+      - run: npm install --no-audit --no-fund
       - name: Project tests
-        run: npx nx test conduit | tee test-output.log
+        run: |
+          set -o pipefail
+          npx nx test conduit | tee test-output.log
       - name: Component characterization
         run: npx vitest run --config apps/conduit/vite.config.mts apps/conduit/src/app/j4.characterize.spec.ts
       - name: Build
