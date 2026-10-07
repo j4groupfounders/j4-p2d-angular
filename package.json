@@ -40,6 +40,7 @@
     "@angular/cli": "~20.3.0",
     "@angular/compiler-cli": "20.3.9",
     "@angular/language-service": "20.3.9",
+    "zone.js": "~0.16.3",
     "@nx/devkit": "22.1.1",
     "@nx/eslint": "22.1.1",
     "@nx/eslint-plugin": "22.1.1",
