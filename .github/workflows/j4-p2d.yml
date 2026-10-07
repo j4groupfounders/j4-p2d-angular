@@ -16,6 +16,8 @@ jobs:
       - run: npm install --no-audit --no-fund --legacy-peer-deps
       - name: Project tests
         run: npx nx test conduit | tee test-output.log
+      - name: Component characterization
+        run: npx vitest run --config apps/conduit/vite.config.mts apps/conduit/src/app/j4.characterize.spec.ts
       - name: Build
         run: npx nx build conduit --configuration=production
       - name: Boot and characterize
@@ -27,6 +29,7 @@ jobs:
           path: |
             test-output.log
             surface.actual.json
+            components.actual.json
             http-evidence/**
             seed-results.json
             seed-evidence/
