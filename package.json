@@ -39,6 +39,7 @@
     "@angular-eslint/template-parser": "20.6.0",
     "@angular/cli": "~20.3.0",
     "@angular/compiler-cli": "20.3.9",
+    "@angular/build": "20.3.9",
     "@angular/language-service": "20.3.9",
     "zone.js": "~0.15.1",
     "@nx/devkit": "22.1.1",
